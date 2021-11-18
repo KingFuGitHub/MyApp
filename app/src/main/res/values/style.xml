@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="red">
+        <item name="colorAccent">@color/red</item>
+    </style>
+<style name="navigationbar">
+    <item name="android:navigationBarColor">@color/black</item>
+</style>
+
+    <style name="roundCorner">
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <style name="blue">
+        <item name="colorAccent">#6FFFEE</item>
+    </style>
+    <style name="white">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="transparent">
+        <item name="colorAccent">@android:color/transparent</item>
+    </style>
+</resources>

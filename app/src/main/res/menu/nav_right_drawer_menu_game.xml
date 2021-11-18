@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Tap Attack">
+        <menu>
+            <item
+                android:id="@+id/miTapAttack"
+                android:icon="@drawable/ic_fire"
+                android:title="Tap Attack lv 1"/>
+        </menu>
+    </item>
+
+    <item android:title="Skills">
+        <menu>
+
+            <item
+                android:id="@+id/miSkill_2"
+                android:icon="@drawable/ic_fire"
+                android:title="Skill 2: Malevolent Shrine"/>
+
+            <item
+                android:id="@+id/miSkill_3"
+                android:icon="@drawable/ic_fire"
+                android:title="Skill 3: Golden Time" />
+
+            <item
+                android:id="@+id/miSkill_4"
+                android:icon="@drawable/ic_fire"
+                android:title="Skill 3: Piercing Nail" />
+        </menu>
+    </item>
+
+    <item android:title="Energy">
+        <menu>
+            <item
+                android:id="@+id/miTapEnergyRegen"
+                android:icon="@drawable/ic_fire"
+                android:title="Tap Energy Regen + 1"/>
+
+            <item
+                android:id="@+id/miTotalEnergy"
+                android:icon="@drawable/ic_fire"
+                android:title="Energy Capacity + 20"/>
+        </menu>
+    </item>
+
+    <item android:title="Passives">
+        <menu>
+            <item
+                android:id="@+id/miCritChance"
+                android:icon="@drawable/ic_fire"
+                android:title="crit chance + 5%"/>
+
+            <item
+                android:id="@+id/miCritDamage"
+                android:icon="@drawable/ic_fire"
+                android:title="Crit Damage + 5%"/>
+
+            <item
+                android:id="@+id/miSkillDamage"
+                android:icon="@drawable/ic_fire"
+                android:title="Skill Damage x2"/>
+
+            <item
+                android:id="@+id/miBonusGold"
+                android:icon="@drawable/ic_fire"
+                android:title="Gold + 1000 per kill"/>
+        </menu>
+    </item>
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item android:title="" />
+
+    <item
+        android:id="@+id/miIncreaseArmor"
+        android:title="Increase armor"
+        android:icon="@drawable/ic_fire"/>
+
+    <item
+        android:id="@+id/miGreedisGood"
+        android:icon="@drawable/ic_fire"
+        android:title="Greed is good" />
+
+    <item android:title="" />
+</menu>

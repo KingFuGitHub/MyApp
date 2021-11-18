@@ -1,0 +1,636 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawerMusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Music">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/MusicBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_list"
+                android:onClick="hideSoftKeyboard">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:backgroundTint="@color/white"
+                    android:elevation="0dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/actvSearchSong"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:background="@color/white"
+                            android:completionThreshold="1"
+                            android:fontFamily="@font/titillium_web_semibold"
+                            android:hint="Search a song"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textColorHint="#8E8E8E"
+                            android:textSize="24sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_search"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/actvSearchSong"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <SeekBar
+                    android:id="@+id/seekBarMusicFake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="100dp"
+                    android:onClick="hideSoftKeyboard"
+                    android:progressBackgroundTint="@color/red"
+                    android:progressTint="@color/blue"
+                    android:thumbTint="@color/white"
+                    android:translationZ="1dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/cvMediaControl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <SeekBar
+                    android:id="@+id/seekBarMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="hideSoftKeyboard"
+                    android:progressBackgroundTint="#00FFFFFF"
+                    android:progressTint="#00FFFFFF"
+                    android:thumbTint="@color/white"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/cvMediaControl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:translationZ="1dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvProgressBarMusic1"
+                    android:layout_width="355dp"
+                    android:layout_height="5dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:visibility="visible"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="@+id/seekBarMusic"
+                    app:layout_constraintStart_toStartOf="@+id/seekBarMusic"
+                    app:layout_constraintTop_toTopOf="@+id/seekBarMusic">
+
+                    <LinearLayout
+                        android:layout_width="355dp"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarMusic1"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleY="10"
+                            android:progressBackgroundTint="#80FFFFFF"
+                            android:theme="@style/white" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvProgressBarMusic2"
+                    android:layout_width="355dp"
+                    android:layout_height="12dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="@+id/seekBarMusic"
+                    app:layout_constraintStart_toStartOf="@+id/seekBarMusic"
+                    app:layout_constraintTop_toTopOf="@+id/seekBarMusic"
+                    android:backgroundTint="#00FFFFFF"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarMusic2"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:progress="20"
+                            android:scaleY="10"
+                            android:progressBackgroundTint="#80FFFFFF"
+                            android:theme="@style/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tvCurrentDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:fontFamily="@font/titillium_web"
+                    android:textColor="#919191"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBarMusic"
+                    tools:text="0:00" />
+
+                <TextView
+                    android:id="@+id/tvMaxDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/titillium_web"
+                    android:textColor="#919191"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seekBarMusic"
+                    tools:text="0:00" />
+
+
+                <ImageButton
+                    android:id="@+id/ibMoreMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="90dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvMediaControl"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="60dp"
+                    android:backgroundTint="#00FFCA2B"
+                    android:visibility="visible"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/ivSkip"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="20dp"
+                            android:src="@drawable/ic_skip"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivPrevious"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginBottom="20dp"
+                            android:src="@drawable/ic_previous"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivPlay"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginBottom="20dp"
+                            android:src="@drawable/ic_play_circle"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPictureHolder"
+                    android:layout_width="0dp"
+                    android:layout_height="340dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="50dp"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivCongratulations"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/congratulations"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/ivInTheEnd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/in_the_end"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivLoveMeLikeYouDo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/love_me_like_you_do"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivDontTurnBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dont_turn_back"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivYoungAndBeautiful"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/young_and_beautiful"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivMyHeartWillGoOn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/my_heart_will_go_on"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivPhotograph"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/song1"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivStay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/stay_image"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivHoliday"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/holiday_image"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tvCongratulations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="15"
+                    android:singleLine="true"
+                    android:text="                  Congratulations by PewDiePie                                   "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvInTheEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="                      In The End by Linkin Park                               "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLoveMeLikeYouDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="          Love Me Like You Do by Ellie Goulding                   "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDontTurnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="              Don't Turn Back by Silent Partner                       "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvYoungAndBeautiful"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="              Young and Beautiful by Lana Del Rey                 "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMyHeartWillGoOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="                  My Heart Will Go On by Celine Dion                   "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvStay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="                              Stay by The Kid LAROI                           "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvHoliday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="                                          Holiday by KSI                                 "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSong1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:fontFamily="@font/titillium_web_bold"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="10dp"
+                    android:scrollHorizontally="true"
+                    android:shadowColor="@color/yellow"
+                    android:shadowRadius="12"
+                    android:singleLine="true"
+                    android:text="                      Song1                         "
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/seekBarMusic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ibRedHeart"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginBottom="85dp"
+                    android:backgroundTint="#00FFCA2B"
+                    android:elevation="150dp"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:src="@drawable/ic_heart_fill"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ibEmptyHeart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="90dp"
+                    android:backgroundTint="#00FFCA2B"
+                    android:elevation="200dp"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:src="@drawable/ic_heart_empty"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navViewLeftMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                android:foregroundGravity="left"
+                android:visibility="visible"
+                app:headerLayout="@layout/nav_left_header"
+                app:menu="@menu/nav_left_drawer_menu" />
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navViewRightMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fitsSystemWindows="true"
+                android:foregroundGravity="right"
+                android:visibility="visible"
+                app:headerLayout="@layout/nav_right_header_music"
+                app:menu="@menu/nav_right_drawer_menu_music" />
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

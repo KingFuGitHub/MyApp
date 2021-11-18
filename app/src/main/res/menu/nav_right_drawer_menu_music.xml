@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miCongratulation"
+        android:title="1. Congratulation"
+        android:icon="@drawable/ic_note"/>
+
+    <item
+        android:id="@+id/miInTheEnd"
+        android:title="2. In The End"
+        android:icon="@drawable/ic_note"/>
+
+    <item
+        android:id="@+id/miLoveMeLikeYouDo"
+        android:title="3. Love Me Like You Do"
+        android:icon="@drawable/ic_note"/>
+
+    <item
+        android:id="@+id/miDontTurnBack"
+        android:title="4. Don't Turn Back"
+        android:icon="@drawable/ic_note"
+        />
+
+    <item
+        android:id="@+id/miYoungAndBeautiful"
+        android:title="5. Young and Beautiful"
+        android:icon="@drawable/ic_note"
+        />
+
+    <item
+        android:id="@+id/miMyHeartWillGoOn"
+        android:title="6. My Heart Will Go On"
+        android:icon="@drawable/ic_note"
+        />
+
+    <item
+        android:id="@+id/miStay"
+        android:title="7. Stay"
+        android:icon="@drawable/ic_note"
+        />
+
+    <item
+        android:id="@+id/miHoliday"
+        android:title="8. Holiday"
+        android:icon="@drawable/ic_note"
+        />
+
+    <item
+        android:id="@+id/miPhotograph"
+        android:title="9. Photograph"
+        android:icon="@drawable/ic_note"
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/miAddSong"
+        android:title="Add Song"
+        android:icon="@drawable/ic_add"
+        />
+
+
+</menu>
