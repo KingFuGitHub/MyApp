@@ -201,6 +201,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="110dp"
                 android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
                 app:cardCornerRadius="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
@@ -209,10 +210,10 @@
                     android:id="@+id/btnGoToLogin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:backgroundTint="#FF2C2C"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
                     android:text="Login"
-                    android:backgroundTint="#FF2C2C"
                     android:textSize="9sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />

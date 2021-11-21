@@ -201,6 +201,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
                 android:shape="ring"
                 app:cardCornerRadius="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -229,6 +230,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="110dp"
                 android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
                 app:cardCornerRadius="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
